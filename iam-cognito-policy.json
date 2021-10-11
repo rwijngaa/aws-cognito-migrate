@@ -1,0 +1,43 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cognito-idp:ForgotPassword",
+                "cognito-idp:GlobalSignOut",
+                "cognito-idp:ConfirmSignUp",
+                "cognito-idp:CreateUserPool",
+                "cognito-idp:GetUserAttributeVerificationCode",
+                "cognito-idp:InitiateAuth",
+                "cognito-idp:SetUserMFAPreference",
+                "cognito-idp:GetUser",
+                "cognito-idp:ConfirmForgotPassword",
+                "cognito-idp:SetUserSettings",
+                "cognito-idp:SignUp",
+                "cognito-idp:VerifyUserAttribute",
+                "cognito-idp:ListDevices",
+                "cognito-idp:ListUserPools",
+                "cognito-idp:AssociateSoftwareToken",
+                "cognito-idp:VerifySoftwareToken",
+                "cognito-idp:GetDevice",
+                "cognito-idp:RespondToAuthChallenge",
+                "cognito-idp:UpdateUserAttributes",
+                "cognito-idp:DescribeUserPoolDomain",
+                "cognito-idp:UpdateDeviceStatus",
+                "cognito-idp:ChangePassword",
+                "cognito-idp:ConfirmDevice",
+                "cognito-idp:ResendConfirmationCode",
+                "iam:PassRole"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "cognito-idp:*",
+            "Resource": "arn:aws:cognito-idp:*:<your-account-id>:userpool/*"
+        }
+    ]
+}
